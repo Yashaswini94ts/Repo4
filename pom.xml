@@ -58,6 +58,17 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
         </plugin>
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>cobertura-maven-plugin</artifactId>
+  <version>2.7</version>
+  <configuration>
+    <formats>
+      <formats>xml</formats>
+    </formats>
+    <outputDirectory>${project.reporting.outputDirectory}/cobertura</outputDirectory>
+  </configuration>
+</plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.3.0</version>
@@ -87,14 +98,3 @@
     </pluginManagement>
   </build>
 </project>
-<plugin>
-  <groupId>org.codehaus.mojo</groupId>
-  <artifactId>cobertura-maven-plugin</artifactId>
-  <version>2.7</version>
-  <configuration>
-    <formats>
-      <formats>xml</formats>
-    </formats>
-    <outputDirectory>${project.reporting.outputDirectory}/cobertura</outputDirectory>
-  </configuration>
-</plugin>
